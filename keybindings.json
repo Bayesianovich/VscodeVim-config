@@ -1,0 +1,79 @@
+
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "cmd+o",
+    "command": "projectManager.listGitProjects#sideBarGit"
+
+  },
+  {
+    "key": "ctrl+=",
+    "command": "expand_region", 
+    "when": "editorTextFocus"
+},
+{
+    "key": "ctrl+-",
+    "command": "undo_expand_region",
+    "when": "editorTextFocus && editorHasSelection"
+},
+{
+  "key": "capslock capslock",
+  "command": "extension.toggleZenMode"
+},
+
+// Copy to your `keybindings.json` and customize to override.
+{
+  "key": "ctrl+b",
+  "command": "extension.toggleBool",
+  "when": "editorTextFocus"
+},
+{
+  "key": "a",
+  "command": "explorer.newFile", 
+  "when": "filesExplorerFocus && !inputFocus"
+},
+{
+  "key": "r",
+  "command": "renameFile",
+  "when": "filesExplorerFocus && !inputFocus"
+},
+{
+  "key": "c",
+  "command": "filesExplorer.copy",
+  "when": "filesExplorerFocus && !inputFocus"
+},
+{
+  "key": "p",
+  "command": "filesExplorer.paste",
+  "when": "filesExplorerFocus && !inputFocus"
+},
+{
+  "key":"d",
+  "command": "deleteFile" ,
+  "when": "filesExplorerFocus && !inputFocus" 
+},
+
+ { "key": "ctrl+z", "command": "workbench.action.terminal.focus" },  
+ {
+    "key": "ctrl+z",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+{
+  "key": "ctrl+e", // space打開文件
+  "command": "workbench.files.action.focusFilesExplorer",
+  "when": "!explorerViewletFocus"
+},
+{
+  "key": "ctrl+e",
+  "command": "workbench.action.focusActiveEditorGroup",
+  "when": "explorerViewletFocus"
+}
+
+
+
+
+
+
+] 
+  
