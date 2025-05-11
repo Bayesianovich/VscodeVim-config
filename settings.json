@@ -1,0 +1,317 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "Everforest Dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "window.zoomLevel": 1,
+    "zenMode.hideLineNumbers": false,
+    "editor.lineNumbers": "relative" ,
+    "editor.fontSize": 12,
+    "editor.fontLigatures": true,
+    "editor.minimap.autohide": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.showUnused": true, 
+    "workbench.startupEditor": "readme",
+    "explorer.confirmDelete": false, 
+    "explorer.confirmDragAndDrop": false,
+    // "extensions.ignoreRecommendations": true,
+    "extensions.autoUpdate": "onlyEnabledExtensions", 
+    "projectManager.git.baseFolders": ["$home/Desktop/work_space"],
+    "projectManager.sortList": "Recent",
+    "workbench.settings.editor": "json",
+    // 使用系统剪贴板
+    "vim.useSystemClipboard": true,
+    "vim.highlightedyank.color": "rgba(1,210,210,0.7)",
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.textColor": "white",
+    "vim.hlsearch": true,
+    // leader key 设置为空格
+    "vim.leader": "<space>",
+    "vim.foldfix": true, //foldfix为true时，代码在收起状态下，光标在折叠的代码上时,上下移动不会自动展开折叠的代码
+    // 启用 Vim 状态栏颜色控制功能
+    "vim.ignorecase": false,
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.surround": true,
+    "vim.statusBarColorControl": true,
+    // 为不同的 Vim 模式定义状态栏颜色
+    "vim.statusBarColors": {
+      "normal": "#005f5f",     // 正常模式 - 蓝绿色
+      "insert": "#5f0000",     // 插入模式 - 深红色
+      "visual": "#5f00af",     // 可视模式 - 紫色
+      "visualline": "#005f87", // 行可视模式 - 蓝色
+      "visualblock": "#86592d", // 块可视模式 - 棕色
+      "replace": "#000000"     // 替换模式 - 黑i色
+    },
+
+    "vim.visualModeKeyBindings": [
+        {
+          "before": ["i", "i"],
+          "after": ["<Esc>"]
+        }
+      ],
+    "vim.insertModeKeyBindings": [
+      {
+      "before": ["i", "i"],
+      "after": ["<Esc>"]
+      }
+    ],
+   "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },  
+    {
+      "before":["<leader>","i"],
+      "after": ["extension.toggleBool"]
+    },
+    {
+      "before": ["<c-a>"],
+      "after": ["g", "g","V","G"]
+    },
+    // 进入块可视化模式，blockwise visual mode
+    {
+      "before": ["<leader>", "v"],
+      "after": ["<C-v>"]
+    },
+    // 格式化代码
+    {
+      "before": ["<leader>", "l", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // 变量符l重命名
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    
+    // 打开侧边栏
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+   
+    // 定义速览
+    {
+      "before": ["<leader>","k"],
+      "commands": ["editor.action.showHover"]
+    },
+    // 往前显示错误
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    // 往后显示错误
+    {
+      "before": ["<leader>", "n"],
+      "commands": ["editor.action.marker.next"]
+    },
+    // 觸發修復
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.quickFix"]
+    },
+  
+    // 转到定义
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    // 转到引用
+    {
+      "before": ["g", "r"],
+       "commands": ["editor.action.goToReferences"]
+    },
+    // 转到实现
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    // 回退到上一个位置
+    { 
+      "before": ["g", "b"],
+      "commands": ["workbench.action.navigateBack"]
+    },
+    // 自定义 EasyMotion 触发：用 <leader>e 来激活 EasyMotion
+    {
+      "before": ["<leader>", "s"], // 使用 <leader>e 触发 然後s s
+      "after": ["<space>", "<space>"]
+    },
+    // 全局搜索文件名
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // 全局搜索文字
+    {
+      "before": ["<leader>", "f", "w"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    // 切换最左侧图标面板可见性
+    {
+      "before": ["<leader>", "s", "a"],
+      "commands": ["workbench.action.toggleActivityBarVisibility"]
+    },
+ 
+    // 关闭当前标签页
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // 退出 vscode
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeWindow"]
+    },
+    // 保存文件
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    // 组中上一个标签页
+    {
+      "before": ["<leader>","t","h"],
+      "commands": ["workbench.action.previousEditorInGroup"]
+    },
+    // 组中下一个标签页
+    {
+      "before": ["<leader>","t","l"],
+      "commands": ["workbench.action.nextEditorInGroup"]
+    },
+    // 关闭标签组
+    {
+      "before": ["<leader>", "g", "c"],
+      "commands": ["workbench.action.closeEditorsInGroup"]
+    },
+    // 第一个标签页
+     {
+      "before": ["<leader>", "t", "f"],
+      "commands": ["workbench.action.firstEditorInGroup"] 
+    },
+    // 最后一个标签页
+    {
+      "before": ["<leader>", "t", "e"],
+      "commands": ["workbench.action.lastEditorInGroup"] 
+    },
+    // 全部折叠
+    {
+      "before": ["<leader>", "z", "c"],
+      "commands": ["editor.foldAll"]
+    },
+    // 全部展开
+    {
+      "before": ["<leader>", "z", "o"],
+      "commands": ["editor.unfoldAll"]
+    },
+    // gh 到行头
+    {
+      "before": ["g", "h"],
+      "commands": ["cursorHome"]
+    },
+    // gl 到行尾
+    {
+      "before": ["g", "l"],
+      "commands": ["cursorEnd"]
+    },
+    // ge 到文件尾
+    {
+      "before": ["g", "e"],
+      "commands": ["cursorBottom"]
+    },
+    // 开始调试
+    {
+      "before": ["<leader>", "d", "b"],
+      "commands": ["workbench.action.debug.start"]
+    },
+    // 停止调试
+    {
+      "before": ["<leader>", "d", "s"],
+      "commands": ["workbench.action.debug.stop"]
+    },
+    // 单步跳过
+    {
+      "before": ["<leader>", "d", "o"],
+      "commands": ["workbench.action.debug.stepOver"]
+    },
+    // 进入下一步
+    {
+      "before": ["<leader>", "d", "i"],
+      "commands": ["workbench.action.debug.stepInto"]
+    },
+    // 跳出下一步
+    {
+      "before": ["<leader>", "d", "u"],
+      "commands": ["workbench.action.debug.stepOut"]
+    },
+  ],
+  "backgroundCover.imagePath": "/private/var/folders/79/hyrm5ntd6s7dywxnj905z0k40000gn/T/com.apple.Photos.NSItemProvider/uuid=C5C04FE3-F07glD-4410-A3CB-63D5FCA7AC8A&library=1&type=1&mode=1&loc=true&cap=true.jpeg/img2.wallspic.com-air_hang_kong-ping_guo_ta-ping_guo-qi_fen-5120x2880.jpeg",
+  
+  "[python]": {
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.unusedImports": "explicit",
+        "source.organizeImports": "explicit"
+      },
+      "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+"better-comments.tags": [
+  {
+    "tag": "!",
+    "color": "#FF2D00",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": false
+  },
+  {
+    "tag": "?",
+    "color": "#3498DB",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": false
+  },
+  {
+    "tag": "//",
+    "color": "#474747",
+    "strikethrough": true,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": false
+  },
+  {
+    "tag": "todo",
+    "color": "#FF8C00",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": false
+  },
+  {
+    "tag": "*",
+    "color": "#98C379",
+    "strikethrough": false,
+    "underline": false,
+    "backgroundColor": "transparent",
+    "bold": false,
+    "italic": false
+  }
+],
+"editor.mouseWheelZoom": true,
+"workbench.colorCustomizations": {
+  "statusBar.background": "#005f87",
+  "statusBar.noFolderBackground": "#005f87",
+  "statusBar.debuggingBackground": "#005f87",
+  "statusBar.foreground": "#ffffff",
+  "statusBar.debuggingForeground": "#ffffff"
+},
+"github.copilot.enable": {
+  "*": false
+},
+}
